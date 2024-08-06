@@ -36,7 +36,7 @@
                 <input type="button" name="b0" value="0" onclick="addToCalculator(b0.value)">
                 <input type="button" name="potb" value="." onclick="addToCalculator(potb.value)">
                 <input type="button" name="divb" value="/" onclick="addToCalculator(divb.value)">
-                <input type="button" class="green" value="=">
+                <input type="button" class="green" value="=" onclick="finalize()">
             </div>
         </form>
     </div>
@@ -44,6 +44,10 @@
     <script>
         function addToCalculator(value) {
             document.getElementById("displayResult").value += value;
+        }
+
+        function finalize() {
+            document.getElementById("displayResult").value = eval(document.getElementById("displayResult").value);
         }
     </script>
 
