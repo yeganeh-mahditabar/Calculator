@@ -19,18 +19,21 @@
                 <input type="button" name="b8" value="8" onclick="addToCalculator(b8.value)">
                 <input type="button" name="b9" value="9" onclick="addToCalculator(b9.value)">
                 <input type="button" name="addb" value="+" onclick="addToCalculator(addb.value)">
+                <input type="button" name="abs" value="|x|" onclick="mathCalculator('abs')">
             </div>
             <div class="row">
                 <input type="button" name="b4" value="4" onclick="addToCalculator(b4.value)">
                 <input type="button" name="b5" value="5" onclick="addToCalculator(b5.value)">
                 <input type="button" name="b6" value="6" onclick="addToCalculator(b6.value)">
                 <input type="button" name="subb" value="-" onclick="addToCalculator(subb.value)">
+                <input type="button" name="sqrt" value="&radic;" onclick="mathCalculator('sqrt')">
             </div>
             <div class="row">
                 <input type="button" name="b1" value="1" onclick="addToCalculator(b1.value)">
                 <input type="button" name="b2" value="2" onclick="addToCalculator(b2.value)">
                 <input type="button" name="b3" value="3" onclick="addToCalculator(b3.value)">
                 <input type="button" name="mulb" value="*" onclick="addToCalculator(mulb.value)">
+                <input type="button" name="round" value="r" onclick="mathCalculator('round')">
             </div>
             <div class="row">
                 <input type="button" name="b0" value="0" onclick="addToCalculator(b0.value)">
@@ -52,6 +55,11 @@
 
         function reset() {
             document.getElementById("displayResult").value = "";
+        }
+
+        function mathCalculator(mathFunc) {
+            let val = document.getElementById("displayResult").value;
+            document.getElementById("displayResult").value = Math[mathFunc](val);
         }
     </script>
 
