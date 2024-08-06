@@ -12,7 +12,7 @@
             <div class="display">
                 <input type="text" placeholder="0" name="displayResult" id="displayResult" />
             </div>
-            <input type="button" onclick="myFunction()" value="C" class="red">
+            <input type="button" onclick="reset()" value="C" class="red">
             <h2>JavaSctipt Calculator</h2>
             <div class="row">
                 <input type="button" name="b7" value="7" onclick="addToCalculator(b7.value)">
@@ -48,6 +48,10 @@
 
         function finalize() {
             document.getElementById("displayResult").value = eval(document.getElementById("displayResult").value);
+        }
+
+        function reset() {
+            document.getElementById("displayResult").value = "";
         }
     </script>
 
