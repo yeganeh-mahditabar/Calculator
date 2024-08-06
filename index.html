@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <form name="form" id="myForm">
+            <div class="display">
+                <input type="text" placeholder="0" name="displayResult" id="displayResult" />
+            </div>
+            <input type="button" onclick="myFunction()" value="C" class="red">
+            <h2>JavaSctipt Calculator</h2>
+            <div class="row">
+                <input type="button" name="b7" value="7" onclick="addToCalculator(b7.value)">
+                <input type="button" name="b8" value="8" onclick="addToCalculator(b8.value)">
+                <input type="button" name="b9" value="9" onclick="addToCalculator(b9.value)">
+                <input type="button" name="addb" value="+" onclick="addToCalculator(addb.value)">
+            </div>
+            <div class="row">
+                <input type="button" name="b4" value="4" onclick="addToCalculator(b4.value)">
+                <input type="button" name="b5" value="5" onclick="addToCalculator(b5.value)">
+                <input type="button" name="b6" value="6" onclick="addToCalculator(b6.value)">
+                <input type="button" name="subb" value="-" onclick="addToCalculator(subb.value)">
+            </div>
+            <div class="row">
+                <input type="button" name="b1" value="1" onclick="addToCalculator(b1.value)">
+                <input type="button" name="b2" value="2" onclick="addToCalculator(b2.value)">
+                <input type="button" name="b3" value="3" onclick="addToCalculator(b3.value)">
+                <input type="button" name="mulb" value="*" onclick="addToCalculator(mulb.value)">
+            </div>
+            <div class="row">
+                <input type="button" name="b0" value="0" onclick="addToCalculator(b0.value)">
+                <input type="button" name="potb" value="." onclick="addToCalculator(potb.value)">
+                <input type="button" name="divb" value="/" onclick="addToCalculator(divb.value)">
+                <input type="button" class="green" value="=">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
